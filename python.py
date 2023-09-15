@@ -92,37 +92,46 @@ print(type(a))
 #     print(e)
 
 
-number_to_guess = 42
-max_attempts = 6
-attempts = 0
+# number_to_guess = 42
+# max_attempts = 6
+# attempts = 0
 
-print("Welcome to the Guess the Number game!")
-print(f"Guess the number between 0 and 100. You have {max_attempts} attempts.")
-
-
-while attempts < max_attempts:
-    try:
-        guess = int(input("Enter your guess: "))
-    except Exception as e:
-        print("Invalid input. Please enter a number.")
-        continue 
-
-    if guess < 0 or guess > 100:
-        print("Please enter a number between 0 and 100.")
-        continue
-
-    attempts += 1
-
-    if guess < number_to_guess:
-        print("Too low. Try again.")
-    elif guess > number_to_guess:
-        print("Too high. Try again.")
-    else:
-        print(f"Congratulations! You guessed the number {number_to_guess} in {attempts} attempts.")
-        break
-
-else:
-    print(f"Sorry, you've reached the maximum number of attempts. The correct number was {number_to_guess}.")
+# print("Welcome to the Guess the Number game!")
+# print(f"Guess the number between 0 and 100. You have {max_attempts} attempts.")
 
 
+# while attempts < max_attempts:
+#     try:
+#         guess = int(input("Enter your guess: "))
+#     except Exception as e:
+#         print("Invalid input. Please enter a number.")
+#         continue 
 
+#     if guess < 0 or guess > 100:
+#         print("Please enter a number between 0 and 100.")
+#         continue
+
+#     attempts += 1
+
+#     if guess < number_to_guess:
+#         print("Too low. Try again.")
+#     elif guess > number_to_guess:
+#         print("Too high. Try again.")
+#     else:
+#         print(f"Congratulations! You guessed the number {number_to_guess} in {attempts} attempts.")
+#         break
+
+# else:
+#     print(f"Sorry, you've reached the maximum number of attempts. The correct number was {number_to_guess}.")
+
+
+
+
+# def my_function():
+#     print('Hello world!')
+
+# my_function()
+
+# print(max('Hello World'))
+# print(min('HelloWorld'))
+# print(len('Hello World'))
