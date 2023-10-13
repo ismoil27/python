@@ -15,15 +15,12 @@
 # print('Finished the task')
 
 
-
 # n = 5
 # while n > 0:
 #     print(n)
 #     n = n - 1
 
 # print('Blastoff!')
-
-
 
 
 '''
@@ -60,12 +57,12 @@ print(type(a))
 
 
 # ====================== Into to Programming. Lesson 3 ===========================
-# Rule 1: Always make 'comment' if your code is nested or 
+# Rule 1: Always make 'comment' if your code is nested or
 
 # print(3 == 3)
 
 # if(17 and True):
-#     print('hello') 
+#     print('hello')
 
 # if(-17 or False):
 #     print('17 is converted to Bool')
@@ -105,7 +102,7 @@ print(type(a))
 #         guess = int(input("Enter your guess: "))
 #     except Exception as e:
 #         print("Invalid input. Please enter a number.")
-#         continue 
+#         continue
 
 #     if guess < 0 or guess > 100:
 #         print("Please enter a number between 0 and 100.")
@@ -125,8 +122,6 @@ print(type(a))
 #     print(f"Sorry, you've reached the maximum number of attempts. The correct number was {number_to_guess}.")
 
 
-
-
 # def my_function():
 #     print('Hello world!')
 
@@ -135,3 +130,21 @@ print(type(a))
 # print(max('Hello World'))
 # print(min('HelloWorld'))
 # print(len('Hello World'))
+
+
+# =================== LESSON 5 STRINGS =======================
+
+# word = 'ayya'
+# if word < 'banana':
+#     print('it is less than banana')
+# elif word > 'banana':
+#     print('Your word bigger than banana')
+
+
+data = 'From stephen.marquard@uct.ac.za Sat Jan 5'
+atpos = data.find('@')
+print(atpos)
+sppos = data.find(' ', atpos)
+print(sppos)
+host = data[atpos+1:sppos]
+print(host)
