@@ -70,14 +70,9 @@ print(type(a))
 #     print('Not converted')
 
 
-# print(bool('hi'))
-
-# x = 7
-
-# if x % 2 == 0:
-#     print('x is even')
-# if x % 2 != 0:
-#     print('x is odd')
+# def repeat_lyrics():
+#     print_lyrics()
+#     print_lyrics()
 
 
 # inp = input('Enter Fahrenheit Temperature:')
@@ -130,21 +125,3 @@ print(type(a))
 # print(max('Hello World'))
 # print(min('HelloWorld'))
 # print(len('Hello World'))
-
-
-# =================== LESSON 5 STRINGS =======================
-
-# word = 'ayya'
-# if word < 'banana':
-#     print('it is less than banana')
-# elif word > 'banana':
-#     print('Your word bigger than banana')
-
-
-data = 'From stephen.marquard@uct.ac.za Sat Jan 5'
-atpos = data.find('@')
-print(atpos)
-sppos = data.find(' ', atpos)
-print(sppos)
-host = data[atpos+1:sppos]
-print(host)
