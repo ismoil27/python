@@ -125,3 +125,72 @@ print(type(a))
 # print(max('Hello World'))
 # print(min('HelloWorld'))
 # print(len('Hello World'))
+
+
+# ====================== TEXT files and Lines, Strings. Lesson 7 ===========================
+
+# fhand = open('mbox-short.txt')
+
+# count = 0
+
+# for line in fhand:
+#     print('Line Count:', line.upper())
+# ===========================================
+# inp = fhand.read()
+# print(inp[-100: len(inp)-1])
+# ===========================================
+# for line in fhand:
+#     if line.startswith('From:'):
+#         print(line)
+# ===========================================
+# for line in fhand:
+#     line = line.rstrip()
+#     if line.find('From:') == -1:
+#         continue
+#     print(line)
+# ===========================================
+# for line in fhand:
+#     line = line.rstrip()
+#     if not line.startswith('From:'):
+#         continue
+#     print(line)
+# ===========================================
+# fout = open('output.txt', 'w')
+# line1 = "This here's the wattle, \n"
+# fout.write(line1)
+# line2 = "This here's the wattle again, \n"
+# fout.write(line2)
+# fout.close()
+
+
+count = 0
+total_spam_confidence = 0.0
+
+# Prompt the user for the file name
+file_name = input("Enter the file name: ")
+
+try:
+    # Attempt to open the file
+    with open(file_name, 'r') as file:
+        # Iterate through each line in the file
+        for line in file:
+            # Check if the line starts with 'X-DSPAM-Confidence:'
+            if line.startswith('X-DSPAM-Confidence:'):
+                # Split the line to extract the floating-point number
+                spam_confidence = float(line.split(':')[1])
+                # Add the spam confidence to the total
+                total_spam_confidence += spam_confidence
+                # Increment the count
+                count += 1
+
+    if count > 0:
+        average_spam_confidence = total_spam_confidence / count
+        print(f"Average spam confidence: {average_spam_confidence}")
+    else:
+        print("No lines with 'X-DSPAM-Confidence:' found in the file.")
+
+except FileNotFoundError:
+    print(f"File '{file_name}' not found.")
+
+except Exception as e:
+    print(f"An error occurred: {str(e)}")
