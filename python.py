@@ -166,21 +166,14 @@ print(type(a))
 count = 0
 total_spam_confidence = 0.0
 
-# Prompt the user for the file name
 file_name = input("Enter the file name: ")
 
 try:
-    # Attempt to open the file
     with open(file_name, 'r') as file:
-        # Iterate through each line in the file
         for line in file:
-            # Check if the line starts with 'X-DSPAM-Confidence:'
             if line.startswith('X-DSPAM-Confidence:'):
-                # Split the line to extract the floating-point number
                 spam_confidence = float(line.split(':')[1])
-                # Add the spam confidence to the total
                 total_spam_confidence += spam_confidence
-                # Increment the count
                 count += 1
 
     if count > 0:
