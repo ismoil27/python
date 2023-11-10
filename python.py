@@ -163,27 +163,63 @@ print(type(a))
 # fout.close()
 
 
-count = 0
-total_spam_confidence = 0.0
+# count = 0
+# total_spam_confidence = 0.0
 
-file_name = input("Enter the file name: ")
+# file_name = input("Enter the file name: ")
 
-try:
-    with open(file_name, 'r') as file:
-        for line in file:
-            if line.startswith('X-DSPAM-Confidence:'):
-                spam_confidence = float(line.split(':')[1])
-                total_spam_confidence += spam_confidence
-                count += 1
+# try:
+#     with open(file_name, 'r') as file:
+#         for line in file:
+#             if line.startswith('X-DSPAM-Confidence:'):
+#                 spam_confidence = float(line.split(':')[1])
+#                 total_spam_confidence += spam_confidence
+#                 count += 1
 
-    if count > 0:
-        average_spam_confidence = total_spam_confidence / count
-        print(f"Average spam confidence: {average_spam_confidence}")
-    else:
-        print("No lines with 'X-DSPAM-Confidence:' found in the file.")
+#     if count > 0:
+#         average_spam_confidence = total_spam_confidence / count
+#         print(f"Average spam confidence: {average_spam_confidence}")
+#     else:
+#         print("No lines with 'X-DSPAM-Confidence:' found in the file.")
 
-except FileNotFoundError:
-    print(f"File '{file_name}' not found.")
+# except FileNotFoundError:
+#     print(f"File '{file_name}' not found.")
 
-except Exception as e:
-    print(f"An error occurred: {str(e)}")
+# except Exception as e:
+#     print(f"An error occurred: {str(e)}")
+
+
+# ====================== new lesson Dicionaries =========================
+
+eng2uzb = {'one': 'bir', 'two': 'ikki', 'three': 'uch'}
+# print(eng2uzb['two'])
+
+vals = list(eng2uzb.values())
+print(vals)
+
+# word = 'brontosaurus'
+# d = dict()
+# for c in word:
+#     if c not in d:
+#         d[c] = 1
+#     else:
+#         d[c] = d[c] + 1
+# print(d)
+
+# word = 'brontosaurus'
+# d = dict()
+# for c in word:
+#     d[c] = d.get(c, 0) + 1
+# print(d)
+
+counts = {'chuck': 1, "annie": 42, 'jan': 100}
+
+lst = list(counts.keys())
+print(lst)
+lst.sort()
+for key in lst:
+    print(key, counts[key])
+['jan', 'chuck', 'annie']
+# annie 42
+# chuck 1
+# jan 100
