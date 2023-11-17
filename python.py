@@ -191,11 +191,11 @@ print(type(a))
 
 # ====================== new lesson Dicionaries =========================
 
-eng2uzb = {'one': 'bir', 'two': 'ikki', 'three': 'uch'}
+# eng2uzb = {'one': 'bir', 'two': 'ikki', 'three': 'uch'}
 # print(eng2uzb['two'])
 
-vals = list(eng2uzb.values())
-print(vals)
+# vals = list(eng2uzb.values())
+# print(vals)
 
 # word = 'brontosaurus'
 # d = dict()
@@ -212,14 +212,79 @@ print(vals)
 #     d[c] = d.get(c, 0) + 1
 # print(d)
 
-counts = {'chuck': 1, "annie": 42, 'jan': 100}
+# counts = {'chuck': 1, "annie": 42, 'jan': 100}
 
-lst = list(counts.keys())
-print(lst)
-lst.sort()
-for key in lst:
-    print(key, counts[key])
-['jan', 'chuck', 'annie']
+# lst = list(counts.keys())
+# print(lst)
+# lst.sort()
+# for key in lst:
+#     print(key, counts[key])
+# ['jan', 'chuck', 'annie']
 # annie 42
 # chuck 1
 # jan 100
+
+
+#  ==================== Lesson tuple ========================
+
+# At the same time while doing for loop we can iterate key, value at the same time in tuple
+
+# t = ("a", "b", "c", "d", "e")
+# print(t)
+# t = ('A',) + t[1:]
+# print(t)
+
+# t = ('C',) + t[3:]
+# print(t)
+
+# t = t[:2] + ("C",) + t[3:]
+# print(t)
+
+# print((0, 1, 2) < (0, 3, 4))
+
+
+# txt = "but soft what light in wonder window breaks"
+# words = txt.split()
+# t = list()
+
+# for word in words:
+#     t.append((len(word), words))
+# t.sort(reverse=True)
+
+# res = list()
+# for length, word in t:
+#     res.append(word)
+# print(res)
+
+
+# txt = "but soft what light in wonder window breaks"
+# words = txt.split()
+# t = list()
+
+# vowels = "aeiou"
+
+# for word in words:
+#     if all(char in vowels for char in word):
+#         t.append((len(word), word))
+
+# t.sort(reverse=True)
+
+# res = list()
+# for _, word in t:
+#     res.append(word)
+# print(res)
+
+
+# ============== List Comprehension =========================
+
+# list_of_ints_in_string = ["42", "65", "12"]
+# list_of_ints = [int(x) for x in list_of_ints_in_string]
+# print(sum(list_of_ints))
+
+# list_of_ints_in_string = ["42", "65", "12"]
+# list_of_ints = []
+# for x in list_of_ints_in_string:
+#     list_of_ints.append(int(x))
+# print(sum(list_of_ints))
+
+# ============== List Comprehension =========================
