@@ -288,3 +288,45 @@ print(type(a))
 # print(sum(list_of_ints))
 
 # ============== List Comprehension =========================
+
+
+# ================== Regular Expressions ===================
+
+# import re
+# hand = open('mbox-short.txt')
+# for line in hand:
+#     line = line.rstrip()
+#     if re.search('From:', line):
+#         print(line)
+
+
+# import re
+# hand = open('mbox-short.txt')
+# for line in hand:
+#     line = line.rstrip()
+#     x = re.findall('[a-zA-ZO-9]\S*@\S*[a-zA-Z]', line)
+#     if len(x) > 0:
+#         print(x)
+
+
+# import re
+# hand = open('mbox-short.txt')
+# seen_emails = set()  # Set to store unique emails
+
+# for line in hand:
+#     line = line.rstrip()
+#     emails = re.findall('[a-zA-Z0-9]\S*@\S*[a-zA-Z]', line)
+
+#     for email in emails:
+#         if email not in seen_emails:
+#             seen_emails.add(email)
+#             print(email)
+
+
+import re
+hand = open('mbox-short.txt')
+for line in hand:
+    line = line.rstrip()
+    x = re.findall('^X\S*: ([0-9.]+)', line)
+    if len(x) > 0:
+        print(x)
