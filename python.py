@@ -323,10 +323,38 @@ print(type(a))
 #             print(email)
 
 
-import re
-hand = open('mbox-short.txt')
-for line in hand:
-    line = line.rstrip()
-    x = re.findall('^X\S*: ([0-9.]+)', line)
-    if len(x) > 0:
-        print(x)
+# import re
+# hand = open('mbox-short.txt')
+# for line in hand:
+#     line = line.rstrip()
+#     x = re.findall('^X\S*: ([0-9.]+)', line)
+#     if len(x) > 0:
+#         print(x)
+
+
+# __ private method always __init__
+# _protected
+
+# self = this from JavaScript
+
+
+import pygame
+
+
+# class Person:
+#     name = 'Alex'
+#     age = 55
+
+#     def print_att(self):
+#         print(self.name, self.age)
+
+
+# p1 = Person()
+
+# print(p1.print_att())
+
+
+print('Starting Game')
+print('Initialising pygame')
+pygame.init()
+print('Initialising Hello World Game')
