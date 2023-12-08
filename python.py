@@ -338,7 +338,7 @@ print(type(a))
 # self = this from JavaScript
 
 
-import pygame
+# import pygame
 
 
 # class Person:
@@ -354,7 +354,29 @@ import pygame
 # print(p1.print_att())
 
 
-print('Starting Game')
-print('Initialising pygame')
-pygame.init()
-print('Initialising Hello World Game')
+# print('Starting Game')
+# print('Initialising pygame')
+# pygame.init()
+# print('Initialising Hello World Game')
+
+
+import urllib.request
+import urllib.parse
+import urllib.error
+from bs4 import BeautifulSoup
+import ssl
+# Ignore SSL certificate errors
+ctx = ssl.create_default_context()
+ctx.check_hostname = False
+ctx.verify_mode = ssl.CERT_NONE
+url = input('Enter - ')
+html = urllib.request.urlopen(url, context=ctx).read()
+soup = BeautifulSoup(html, 'html.parser')
+# Retrieve all of the anchor tags
+tags = soup('a')
+for tag in tags:
+    print(tag.get('href', None))
+    print('TAG:', tag)
+    print('URL:', tag.get('href', None))
+    print('Contents:', tag.contents[0])
+    print('Attrs:', tag.attrs)
