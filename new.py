@@ -144,9 +144,15 @@
 #     print(color)
 
 
-numbers = [1, 2, 4]
-print(numbers)
+numbers = [1, 2, 4, 5, 2, 1, 2]
+# print(numbers)
 
-numbers.extend([5, 6, 7])
+# numbers.extend([5, 6, 7])
 
-print(numbers)
+# print(numbers)
+
+# print(numbers.count(2))
+
+colors = ['red', 'blue', 'gray', 'black', 'indigo', 'green']
+
+print(colors[0][::-1])
